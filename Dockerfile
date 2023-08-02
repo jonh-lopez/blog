@@ -1,7 +1,8 @@
-FROM centos/python-36-centos7:latest
+FROM centos/python-36-centos8:latest
 
 USER root
-
+RUN  yum –y install python3
+RUN  yum –y install python3-pip
 COPY . /tmp/src
 
 RUN mv /tmp/src/.s2i/bin /tmp/scripts
